@@ -1,14 +1,22 @@
 
-<div>
+  <div class="container">
     <h1>My Quote</h1>
     <hr>
-    <ul>
-        <div *ngFor='let goal of quote ;let i = index'>
-        <li >
-          {{goal.name}}
-        </li>
-        <button (click)='toggleDetails(i)'>Toggle Details</button>
-        <app-quotedetails *ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'completeGoal($event,i)'></app-quotedetails>
-       </div>
-    </ul>
+    <div class="row">
+      <div class="col-md-6">
+          <div *ngFor='let goal of quote ;let i = index'>
+              <div>
+                <h5 id={{i}} appHighlight>{{goal.name}} due on {{goal.completeDate |date}}</h5>
+                <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+              </div>
+              <div *ngIf='goal.showDescription' >
+                <app-quotedetails  [goal]='goal' (isComplete) = 'deleteGoal($event,i)'></app-quotedetails>
+              </div>
+            </div>
+      </div>
+    </div>
+    
+
+      
+
   </div>
