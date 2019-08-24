@@ -1,0 +1,30 @@
+<div class="container">
+        <h2 class="text-center">Create a new Goal</h2>
+        <hr>
+        <form (ngSubmit)='submitGoal()' #goalForm='ngForm'>
+            <div class="form-group">
+      
+                <label for="name">Name</label>
+                <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name">
+                Display {{newQuote.name}}
+            </div>
+            <div class="form-group">
+      
+                    <label for="author">Author</label>
+                    <input type="text" required class="form-control" id="author">
+          
+                </div>
+            <div class="form-group">
+      
+                <label for="description">Description</label>
+                <textarea class="form-control" id="describe" columns="60" rows="4" required></textarea>
+      
+            </div>
+            <div class="form-group">
+                <label for="complete">Completion</label>
+                <input type='date' id="complete" required>
+      
+            </div>
+            <button type="submit" class="btn btn-danger">Add Quote</button>
+        </form>
+      </div>

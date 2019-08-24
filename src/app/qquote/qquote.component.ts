@@ -24,6 +24,12 @@ export class QquoteComponent implements OnInit {
       }
     }
   }
+  addNewQuote(goal){
+    let goalLength = this.quote.length;
+    goal.id = goalLength+1;
+    goal.completeDate = new Date(goal.completeDate)
+    this.quote.push(goal)
+  }
   constructor() { }
 
   ngOnInit() {
