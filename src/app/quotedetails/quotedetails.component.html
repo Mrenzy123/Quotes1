@@ -1,9 +1,15 @@
 <p>
-    {{goal.description}}
+
+     <br>
+    {{goal.name}} 
     <br>
-    {{goal.name}}
+    {{goal.annual}} 
     <br>
-    {{goal.annual}}
+    {{goal.author}}
   </p>
   <p>This goal will be complete in {{goal.completeDate|dateCount}} days</p>
+  <p>{{likes}}   <button (click)= 'totalLikes()'>like</button></p>
+  <p>{{dislikes}}  <button (click)= 'totalDislikes()'>Dislike</button></p>
   <button (click)= 'quoteComplete(true)' class="btn btn-outline-danger" >Delete Quote</button>
+  
+  

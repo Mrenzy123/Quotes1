@@ -7,10 +7,10 @@ import { Describe } from '../describe';
   styleUrls: ['./quoteform.component.css']
 })
 export class QuoteformComponent implements OnInit {
-  newQuote = new Describe(0,"","",new Date());
+  newQuote = new Describe("","","",new Date());
   @Output() addMyQuote = new EventEmitter<Describe>();
   
-  submitGoal(){
+  PostQuote(){
     this.addMyQuote.emit(this.newQuote);
       }
   constructor() { }
