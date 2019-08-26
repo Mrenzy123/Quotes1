@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'Quotes1';
   
   quote: Describe []= [
-    new Describe('',"", '',new Date()),
+    new Describe(' '," ", ' ',new Date()),
   ];
 }

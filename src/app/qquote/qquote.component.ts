@@ -7,7 +7,7 @@ import { Describe } from '../describe';
 })
 export class QquoteComponent implements OnInit {
   quote: Describe []= [
-    new Describe('',"",'',new Date()),
+    new Describe(' Deborah M '," Deb ",' Jesus is Lord ',new Date()),
     
   ];
   toggleDetails(index){
