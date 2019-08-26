@@ -8,6 +8,10 @@
   <p>This goal will be complete in {{goal.completeDate|dateCount}} days</p>
   <p><b>Likes:</b>{{likes}}  </p>
   <p><b>Dislikes:</b>{{dislikes}}  </p>
+
+  <!-- <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote}}</p>
+  <p  *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p> -->
+
   <button (click)= 'quoteComplete(true)' class="btn btn-outline-danger" ><b>Delete Quote</b></button>
   <button (click)= 'totalLikes()'><b>like</b></button>
   <button (click)= 'totalDislikes()'><b>Dislike</b></button>
