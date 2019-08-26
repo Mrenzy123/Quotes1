@@ -13,5 +13,5 @@
   <p  *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p> -->
 
   <button (click)= 'quoteComplete(true)' class="btn btn-outline-danger" ><b>Delete Quote</b></button>
-  <button (click)= 'totalLikes()'><b>like</b></button>
-  <button (click)= 'totalDislikes()'><b>Dislike</b></button>
+  <button (click)= 'totalLikes()' class="btn btn-outline-success"><b>like</b></button>
+  <button (click)= 'totalDislikes()' class="btn btn-outline-danger"><b>Dislike</b></button>
